@@ -6,7 +6,7 @@
 %%
 
 [0-9]+		     { yylval.fval = atoi(yytext); return NUMBER; }
-[\t ]+               { /* Ignore whitespace */ }
+[\t ]+            
 [\n]                 { return 0; }  
 [+\-*/^()]           { return yytext[0]; }
 .                    { printf("Invalid character: %s\n", yytext); return 0; }
